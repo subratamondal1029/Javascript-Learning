@@ -12,5 +12,5 @@ name = 'Raja'; //it could be changeable
 
 console.table([age,village, name]);
 
-profation = 'programer'; //you can also define a variable like this but we don't prefer defining like this.
-console.log(profation);
+// profation = 'programer'; //you can also define a variable like this but we don't prefer defining like this.
+// console.log(profation);
