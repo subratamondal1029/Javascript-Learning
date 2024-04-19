@@ -61,7 +61,7 @@ console.log(newStr3);
 
 
 //slice
-console.log(newStr.slice(0, 6));  //slice dont take the last index word;
+console.log(newStr.slice(0, 6));  //slice dont take the last index character;
 //lets use something new 
 console.log(newStr.slice(0, newStr.indexOf(' '))) //same value as previous but with this you dont have to know the index Number
 

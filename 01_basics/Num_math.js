@@ -13,8 +13,7 @@ console.log(scoreValue);
 // toPrecision: function toPrecision()
 // ​​
 // toString: function toString()
-// ​​
-// valueOf: function valueOf() 
+
 
 //toString
 console.log(score.toString()); // => convert to string
@@ -22,6 +21,7 @@ console.log(score.toString()); // => convert to string
 //toFixed
 let newScore = 200.2224;
 console.log(newScore.toFixed()); // => 200 //it will convert to string to get number use bellow code
+console.log(newScore.toFixed(2)); // => 200.22 
 console.log(Number(newScore.toFixed())); 
 
 //toprecision
@@ -31,7 +31,7 @@ console.log(Number(newScore.toPrecision(4)));
 //tolocalestring
 let money = 228264632;
 console.log(money.toLocaleString("en-In")); // => 22,82,64,632 
-console.log(money.toLocaleString("en-Us")); // => 228,264,632 
+console.log(money.toLocaleString("en-Us")); // => 228,264,632  | this is default value
 
 //parseInt
 let Numstring = "24444"

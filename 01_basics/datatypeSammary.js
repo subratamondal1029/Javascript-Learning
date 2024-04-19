@@ -4,7 +4,7 @@
 
 const score = 100;
 const scoreValue = 100.3;
-
+const string = "hello world";
 const isLoggedIn = false;
 const outsideTemp = null;
 let userEmail;
@@ -34,6 +34,7 @@ myFunction();
 
 console.log("number == " + typeof score);
 console.log("decimal number == " + typeof scoreValue);
+console.log("String == " + typeof string);
 console.log("boolean == " + typeof isLoggedIn);
 console.log("null == " + typeof outsideTemp);
 console.log("undefined == " + typeof userEmail);
