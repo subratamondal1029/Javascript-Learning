@@ -15,7 +15,7 @@ console.log(myObj); // => { name: 'subrata', title: 'mondal', age: 17, work: 'we
 // console.log("work is " + myObj.work) // => work is web development
 
 // to access full name 
-console.log(myObj["full name"]); // we cant access this key with above code  because this is have a space  and "." mathod dont aprove space or string
+// console.log(myObj["full name"]); // we cant access this key with above code  because this is have a space  and "." mathod dont aprove space or string
 
 
 //change the value
@@ -49,3 +49,17 @@ let SymbObj = {
 // }
 
 // console.log(SymbObj.greting()); // we have to use '()' to access the function
+
+
+//+++++++++++++++++++++++++++++++++++++ part 3 ++++++++++++++++++++++++++++++++
+
+//Object Object de-structuring
+console.log(myObj.name);
+//       ||(same)
+const myName = myObj["full name"];
+console.log(myName);
+//       ||(same)
+const { name: Objname } = myObj; // its use in react js
+console.log(Objname);
+
+// Lets talk about Json Object 
