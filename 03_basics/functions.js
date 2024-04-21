@@ -38,11 +38,50 @@ console.log(result);
 
 function userLoginMassage(username = "sam"){ // userLoginMassage() argument is empty username value will be "sam"
     if (!username) {
-        return "please Enter your username";
+      return "please Enter your username";
     }
         return `${username} just logged in`
     
 }
 
 console.log(userLoginMassage("subrata"));
-// console.log(userLoginMassage());
+// console.log(userLoginMassage()); //empty argument will return undefined
+
+// ++++++++++++++++++++++++++++++++++++ part 2 ++++++++++++++++++++++++++++++++++++
+
+//lets handle multiple arguments with one parameter
+function calculateCartValue(...prices) {
+  console.log(prices);
+
+  //we can sum all the prices using loops
+}
+
+//with using prices
+// calculateCartValue(100, 200, 300) // => 100
+
+//with using ...prices
+calculateCartValue(100, 200, 300) // => it will return an array [100, 200, 300]
+
+
+//handle Object in function
+
+const loginData = {
+  username : "subratamondal1029",
+  password : "subrataPass"
+}
+
+function handleObject(Obj){
+  console.log(`Your Username is "${Obj.username}" and your Password is "${Obj.password}"`);
+}
+
+handleObject(loginData)
+
+// handle Array in function
+
+const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function getforthNum(Arr){
+  console.log(Arr[3]);
+}
+
+getforthNum(numArr)
