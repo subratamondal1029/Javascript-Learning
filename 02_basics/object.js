@@ -63,3 +63,54 @@ const { name: Objname } = myObj; // its use in react js
 console.log(Objname);
 
 // Lets talk about Json Object 
+//sample of JSON
+/* 
+{
+  "login": "subratamondal1029",
+  "id": 164600228,
+  "node_id": "U_kgDOCc-ZpA",
+  "avatar_url": "https://avatars.githubusercontent.com/u/164600228?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/subratamondal1029",
+  "html_url": "https://github.com/subratamondal1029",
+  "followers_url": "https://api.github.com/users/subratamondal1029/followers",
+  "following_url": "https://api.github.com/users/subratamondal1029/following{/other_user}",
+  "gists_url": "https://api.github.com/users/subratamondal1029/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/subratamondal1029/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/subratamondal1029/subscriptions",
+  "organizations_url": "https://api.github.com/users/subratamondal1029/orgs",
+  "repos_url": "https://api.github.com/users/subratamondal1029/repos",
+  "events_url": "https://api.github.com/users/subratamondal1029/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/subratamondal1029/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Subrata Mondal",
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "public_repos": 5,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 1,
+  "created_at": "2024-03-23T04:25:52Z",
+  "updated_at": "2024-04-14T03:09:08Z"
+}
+
+*/
+
+//one more example
+/* 
+[
+    {}'
+    {}'
+    {}'
+    {}
+]
+*/
+
+
+// json same as object but object have to be a name we will learn about more later on fetch api topic
