@@ -85,3 +85,31 @@ function getforthNum(Arr){
 }
 
 getforthNum(numArr)
+
+// +++++++++++++++++++++++++++++++++++++++ IIFE +++++++++++++++++++++++++
+
+//if we want to run a function immediately after it is defined
+
+// Basic Mathod 
+function CDB1(){
+  console.log("Data Base connected 1");
+}
+CDB1(); // its make garbage in code
+
+
+//IIFE Method
+( () => {
+  console.log("Data Base connected 2");
+})(); // we use this Mathod to run a function immediately after it is defined and save the memory of program
+
+//set parameter in IIFE Mathod
+( (a, b) => {
+  console.log(a + b);
+})(10, 20);
+
+//explaining the code 
+// "()" => first for defining a IIFE function
+// "()" => second for execution
+// (define)(Execute);
+
+//In that case we dont have to set any name for function / But We can set a name just like the first IIFE Mathod
