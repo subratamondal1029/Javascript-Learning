@@ -65,12 +65,98 @@ let logedInWithEmail = false
 const conditions = ["<", '>', '==', '===', ">=", '<=', '!=']
 const definations = ["Less Then", "Greater Then", "equal '=' is for define value '==' use to check quality", "strict equal | it check the data type also", "Is the Value is greater then or equal", "is the value is less then or equal", "not equal"]
 
-if(conditions.length == definations.length){
+// if(conditions.length == definations.length){
 
-for (let i = 0; i < conditions.length; i++) {
-  const condition = conditions[i];
-  const defination = definations[i];
-   console.log(`${condition} ---->   ${defination}`);
+// for (let i = 0; i < conditions.length; i++) {
+//   const condition = conditions[i];
+//   const defination = definations[i];
+//    console.log(`${condition} ---->   ${defination}`);
+// }
+
+// }
+
+
+// +++++++++++++++++++++++++ part 2 ++++++++++++++++++++++++++++++++++++++
+
+// else if 
+const currentDate = new Date();
+// currentDate.setMonth(6) // check the statement with this mathod | this is a practical learning
+const month = currentDate.getMonth() + 1;
+
+if (month === 1) {
+  console.log("January");
+} else if (month === 2) {
+  console.log("February");
+} else if (month === 3) {
+  console.log("March");
+} else if (month === 4) {
+  console.log("April");
+} else if (month === 5) {
+  console.log("May");
+} else if (month === 6) {
+  console.log("June");
+} else if (month === 7) {
+  console.log("July");
+} else if (month === 8) {
+  console.log("August");
+} else if (month === 9) {
+  console.log("September");
+} else if (month === 10) {
+  console.log("October");
+} else if (month === 11) {
+  console.log("November");
+} else if (month === 12) {
+  console.log("December");
+} else {
+  console.log("Invalid month");
 }
 
+// else if() is use to check multiple value and print difference output for every condition | logic => if the if() statement not work then go to the else if() part will execute and atleast if the any condition not match else() will execute 
+
+
+//switch case || this easy then else if
+
+switch (month) {
+  case 1:
+    console.log("January");
+    break;
+  case 2:
+    console.log("February");
+    break;
+  case 3:
+    console.log("March");
+    break;
+  case 4:
+    console.log("April");
+    break;
+  case 5:
+    console.log("May");
+    break;
+  case 6:
+    console.log("June");
+    break;
+  case 7:
+    console.log("July");
+    break;
+  case 8:
+    console.log("August");
+    break;
+  case 9:
+    console.log("September");
+    break;
+  case 10:
+    console.log("October");
+    break;
+  case 11:
+    console.log("November");
+    break;
+  case 12:
+    console.log("December");
+    break;
+  default:
+    console.log("Invalid month");
+    break;
 }
+
+// logic => with using switch we dont have to write condition like (month === value) we have to define the key one time and write only the value in case switch is use for "==" or "===" condition and default work as else
+// break => javascript switch case have some problem if any condition match and we dont write break all next code will execute except default value 
