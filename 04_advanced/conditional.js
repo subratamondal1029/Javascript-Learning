@@ -73,7 +73,7 @@ const definations = ["Less Then", "Greater Then", "equal '=' is for define value
 //    console.log(`${condition} ---->   ${defination}`);
 // }
 
-// }
+// } //uncomment this to see the defination of all conditons
 
 
 // +++++++++++++++++++++++++ part 2 ++++++++++++++++++++++++++++++++++++++
@@ -160,3 +160,35 @@ switch (month) {
 
 // logic => with using switch we dont have to write condition like (month === value) we have to define the key one time and write only the value in case switch is use for "==" or "===" condition and default work as else
 // break => javascript switch case have some problem if any condition match and we dont write break all next code will execute except default value 
+
+
+// ++++++++++++++++++++++++++++++ part 3 +++++++++++++++++++++++++++++++++++++++++
+
+//javscript truthy and falsy values
+
+// falsy Values =>  false, 0, -0, ""(empty string), BigInt(373808n), undefined, null
+
+//truthy Values => true, "0", " "(space in string), "false", [](empty array), {}(empty object), function(){}
+
+
+
+
+// nullish coalescing operator
+// nullish coalescing operator is use to check the value is null or undefined
+// nullish coalescing operator => ??
+
+let age = undefined ?? 10; // "??" don't take null or undefined value if there have any valid value
+
+console.log(age);
+
+
+//ternary oprator | this is a shorthand for if else
+
+// conditon ? true : false;
+
+age > 18 ? console.log("you can Drive") : console.log("you can't drive");
+
+age = 19
+
+age > 18 ? console.log("you can Drive") : console.log("you can't drive");
+
