@@ -105,10 +105,65 @@
 // Array base loops
 
 // for of loop
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 // for (const num of numbers) {
 //     console.log(num);
 // }
 
-// this loop dont take condition or increment it will automaticaly do that so we mostly use this kind of loop for print data 
+// const programeName = {
+//     name: "javascript",
+//     version: 1.0,
+//     language: "javascript",
+//     year: 1995,
+// }
 
+// for (const key of programeName) {
+//     console.log(key);
+// }
+
+// this loop dont take condition or increment it will automaticaly do that so we mostly use this kind of loop for print data  | for of loop does not work with object
+// This is use in array 
+
+// for in loop
+// const person = {
+//     name: "John",
+//     age: 22,
+//     gender: "male",
+//     city: "delhi"
+// }
+
+// for (const key in person) {
+//     console.log(key +" is "+ person[key]);
+// }
+
+// as for of loop it also dont take any condition or increment | but there is a catch for of loop give the value but for in loop give the key{object} or index [array]
+// This is use in object mostly
+
+
+// There is more loop that already come with array
+//forEach()
+
+// numbers.forEach((num) =>{
+//     console.log(num);
+// })
+
+// Explain => forEach is a mathod of array [].forEach() | its take a callback(function ()) [].forEach((response) =>{ executional code })
+
+// we can also pass a function in forEach
+
+// numbers.forEach(printVal) //dont execute this function only give the reference its automatically pass the argument
+
+// function printVal(val){
+//     console.log(val);
+// }
+
+
+// for give some more value (item, index, fullArray)
+// numbers.forEach((item, index, arr)=>{
+//     console.log(item, index, arr);
+// })
+
+// This is also work without any condition and increement | we mostly use this loop to get data from array
+
+
+// lets talk about some more array
