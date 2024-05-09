@@ -3,13 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Learning</title>
+    <style>
+        ::selection{
+            background: rgb(0, 110, 255);
+            color: white;
+        }
+        
+        body{
+            background: #000;
+            color: white;
+        }
+
+
+    </style>
 </head>
-<body>
-    <div class="conatiner">
+<body">
+    <div class="container">
         <h1 id="title"></h1>
-        <p id="para">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, accusantium?</p>
-        </p>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloremque.</p>
+
+        <p class="paragraph">one</p>
+        <p class="paragraph">two</p>
+        <p class="paragraph">three</p>
+        <p class="paragraph">four</p>
+        <p class="paragraph">five</p>
+
+        <a id="para2" class="paraSel" href="https://google.com" target="_blank">Google</a>
     </div>
+    <script defer>
+
+
+//how to manepulate html document through javascript
+
+// 1. select html element
+
+// select with "id"
+
+// const title = document.getElementById('id')
+const title = document.getElementById('title')
+// console.log(title); //=> <h1 id="title"></h1>
+
+// querySelector => this is work as css selector
+const container = document.querySelector('.container') // if the class used in multiple element it will take the first element
+// console.log(container); //=><div class="container"></div>
+
+// if we want to check the html of the container 
+// console.log(container.innerHTML) // => it will return whole inner html of container
+
+
+// if we want to take all the element have same class or same element 
+// querySelectorAll
+const paragraph = document.querySelectorAll('.paragraph')
+// console.log(paragraph);
+// This will return a nodelist that look like an array but its not an array But it have forEach() Mathod inbuild like array
+
+
+// we can also take all the element that have same class name with getElementsByClassName() 
+const paragraphClasses = document.getElementsByClassName('paragraph')
+// console.log(paragraphClasses);
+// It will return an HTMLCollection its also look like an array but its dont have forEach loop if we want to use this as array we have to convert it 
+
+const paraArr = Array.from(paragraphClasses)
+// console.log(paraArr); //=> this will return the array
+
+
+// 2. changing the element content
+
+// first access the the inner content 
+let text = document.querySelector('#para')
+                                    text.innerHTML //=> it will take all the html that have .para
+                                    text.textContent // => it will take only the text that have .para
+                                    text.innerText // => it will take only the text that visible in webpage from .para
+
+// changing the content
+
+// text.innerHTML = "This a text"
+// text.textContent = "This a text 2"
+// text.innerText = "This a text 3"
+// all are working but we use innerHTML to add some html
+// text.innerHTML = "<b>This is bold text</b>"
+
+// but  if we use innerText pr textContent to add html its is not posible
+// text.innerText = "<b>This is bold text</b>" //=> <b>This is bold text</b>
+// text.textContent = "<b>This is bold text</b>" //=> <b>This is bold text</b>
+
+
+// 3. changing some styling through js
+    text.style.color = "#ccd04f"
+    text.style.backgroundColor = "green" //=> we cant use background-color like css we have to write backgroundColor in every stying property that have "-" we have to start the next word first letter capital
+    text.style.padding = "10px"
+    text.style.borderRadius = "10px"
+
+// when we use this it will apply inline styling so it get high praority
+
+// if we want to change styling in paraArr we have to use loop here 
+paraArr.forEach((para) =>{
+    para.style.color = "red"
+})
+
+
+// we can also access the atributes of any element 
+const access = document.getElementById('para2')
+
+// console.log(access.getAttribute('id'))
+// console.log(access.getAttribute('class'))
+// console.log(access.getAttribute('href'))
+// console.log(access.getAttribute('target'))
+
+// we can access it directly
+console.log(access.id);
+console.log(access.className);
+console.log(access.href);
+console.log(access.target);
+// we can also change the value of these atribute like inner content 
+
+
+    </script>
 </body>
 </html>
