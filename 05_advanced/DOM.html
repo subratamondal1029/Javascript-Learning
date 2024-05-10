@@ -111,11 +111,72 @@ const access = document.getElementById('para2')
 // console.log(access.getAttribute('target'))
 
 // we can access it directly
-console.log(access.id);
-console.log(access.className);
-console.log(access.href);
-console.log(access.target);
+// console.log(access.id);
+// console.log(access.className);
+// console.log(access.href);
+// console.log(access.target);
 // we can also change the value of these atribute like inner content 
+// we can also use setatribute to set the value 
+// access.setAttribute("id", "testingId")
+// console.log(access);
+
+// 4. access child and parent
+
+// access all childs
+const containerChild = container.children
+// console.log(containerChild); // it will return a HTMLCollection that have all the childs
+
+//access childnodes
+const containerChildNodes = container.childNodes
+// console.log(containerChildNodes); //it will also return the child with space that we add javascript only take the first space so it will show some text element here in node list
+
+// access parent
+const parent = access.parentElement
+// console.log(parent); // it will return the parent element of access
+
+// access firstChild
+const firstChild = container.firstElementChild
+// console.log(firstChild);
+
+// access lastchild
+const lastChild = container.lastElementChild
+// console.log(lastChild);
+
+// access child with index Number
+// console.log(containerChild[4]);
+
+// 5. Create element
+// create a div element
+const div = document.createElement('div')
+
+// add class
+div.className = "hello"
+
+// add id
+div.id = "hello1"
+
+// add attribute
+div.setAttribute('title', 'hello div')
+
+// add styling
+div.style.color = "yellow"
+div.style.backgroundColor = "green"
+div.style.padding = "10px" 
+div.style.borderRadius = "10px" 
+
+// adding text using innerText or textContent
+// div.innerText = "hello world"
+// div.textContent = "hello world"
+
+// we can create text node to add text
+const textNode = document.createTextNode("hello world")
+//we can add text element to div as a children
+div.appendChild(textNode)
+// console.log(div);
+
+// adding the element in container
+container.appendChild(div)
+
 
 
     </script>
