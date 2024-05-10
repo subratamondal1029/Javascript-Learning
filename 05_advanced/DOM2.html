@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2 Learning</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul>
+        <li>javascript</li>
+    </ul>
+
+  <script>
+
+const listContainer = document.querySelector("ul")
+
+    //lets add element in ul using a function
+function addElement(langName){
+    // const li = document.createElement("li")
+    // li.textContent = langName
+    // listContainer.appendChild(li)
+
+
+    // Optimized way to do this | This mathod is use in big projects
+    const li = document.createElement("li")
+    li.appendChild(document.createTextNode(langName))
+    listContainer.appendChild(li)
+}
+
+addElement("java")
+addElement("python")
+addElement("mojo")
+addElement("css")
+
+
+// replace element in DOM
+const fourthChild = document.querySelector("li:nth-child(4)")
+fourthChild.textContent = "C++"
+
+// one more way
+const li = document.createElement("li")
+li.textContent = "C#"
+fourthChild.replaceWith(li)
+
+// remove element from dom 
+const liToRemove = document.querySelector("li:last-child")
+liToRemove.remove()
+
+    </script>
+</body>
+</html>
