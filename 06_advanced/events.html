@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in js</title>
+
+    <div class="container">
+        <button class="btn" id="btn1">Btn 1</button>
+        <!-- <button class="btn" id="btn1" onclick="alert('click one')">Btn 1</button> -->
+        <button class="btn" id="btn2">Btn 2</button>
+        <button class="btn" id="btn3">Btn 3</button>
+        <button class="btn" id="btn4">Btn 4</button>
+        <button class="btn" id="btn5">Btn 5</button>
+        <button class="btn" id="btn6">Btn 6</button>
+        <button class="btn" id="btn7">Btn 7</button>
+    </div>
+
+  </head>
+  <body>
+    <script>
+        // document.getElementById('btn1').onclick = function (){
+        //     alert("click one")
+        // }
+
+    //  document.getElementById('btn1').addEventListener('click', function(e) {
+    //     console.log(e)
+    // }) 
+
+     // there have some more mathod but these were use in past for internet explorer
+     // attachEvent()
+    // jQuery - on 
+
+
+    // (e) some properties 
+    // type, timestamp, preventDefault, target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altKey, shiftKey, altKey, keyCode
+
+//    document.getElementById('btn1').addEventListener('click', (e)=> {
+//        e.preventDefault() // this is a mathod to stop default working
+//         console.log(e.type) // => click (This will give the event type)
+//         console.log(e.timeStamp) // => 3341 (This value show event fire time after page load | value in mili second)
+//         console.log(e.target) // => Give the targeted element
+//         console.log(e.toElement) // =>
+//         console.log(e.srcElement) // => This is also give the targeted element
+//         console.log(e.currentTarget) // => This is also give the targeted element
+//         console.log(e.clientX) // =>  This is work in only mouse events 
+//         console.log(e.clientY) // => This is work in only mouse events 
+//         console.log(e.screenX) // => This is work in only mouse events 
+//         console.log(e.screenY) // => This is work in only mouse events 
+//         console.log(e.altKey) // => This is give is this button is press while the event is fire or not
+//         console.log(e.shiftKey) // => This is give is this button is press while the event is fire or not
+//         console.log(e.ctrlKey) // => This is give is this button is press while the event is fire or not
+//         console.log(e.keyCode) // => this value to get the key | this is working with keyboard event
+//         console.log(e.key) // => this value to get the key | this is working with keyboard event
+//     }) 
+
+
+    // eventPropogation
+// There is two types of event working (bubbling, capturing) 
+// bubbling - event start from child to parent this by default working 
+// capturing - event start from parent to child | we can enable capturing mode with give a true value after function
+
+    // document.querySelector('.container').addEventListener('click', function(e) {
+    //     console.log("container clicked")
+    // }, false)// => false is default value so we don't have write this
+
+
+    // document.getElementById('btn1').addEventListener('click', function(e) {
+    // console.log("btn clicked")  
+    // }, false) 
+
+//output => btn clicked , container clicked
+
+    // document.querySelector('.container').addEventListener('click', function(e) {
+    //     console.log("cotainer clicked")
+    // }, true)
+
+
+    // document.getElementById('btn1').addEventListener('click', function(e) {
+    // console.log("btn clicked")  
+    // }, true)
+
+//output => container clicked , btn clicked
+
+
+// sometimes we add event in child and parent and we want when child event fired the parent event will disable for that moment
+// for this we use stopPropagation() method\
+    // document.querySelector('.container').addEventListener('click', function(e) {
+    //     console.log("container clicked")
+    // })
+
+    // document.getElementById('btn1').addEventListener('click', function(e) {
+    //     console.log("btn clicked")
+    //     e.stopPropagation()
+    // })
+    // output =>  btn clicked
+
+
+    // some Practice
+
+    // with class 
+    // document.querySelectorAll('.btn').forEach((btn) =>{
+    //     btn.addEventListener('click', (e)=> {
+    //         e.target.remove()
+
+    //         if (document.querySelectorAll('.btn').length == 0) {
+    //             location.reload()
+    //         }
+    //     })
+    // })
+
+    // with parent
+    // document.querySelector('.container').addEventListener('click', (e) =>{
+
+    //     if (e.target.tagName === "BUTTON") {
+    //         e.target.remove()
+    //     }
+
+    //      if (document.querySelectorAll('.btn').length == 0) {
+    //             location.reload()
+    //         }
+    // })
+    </script>
+  </body>
+</html>
