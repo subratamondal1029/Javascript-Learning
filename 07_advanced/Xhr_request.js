@@ -16,4 +16,4 @@ xhr.onreadystatechange = function() {
 document.querySelector('button').addEventListener('click', () => xhr.send())
 // we can directly call xhr.send()
 
-// Project in project.html
+// Project in project.html and https://github.com/subratamondal1029/Project_host/blob/main/xhr_Project.html
